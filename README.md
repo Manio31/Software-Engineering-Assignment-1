@@ -1,37 +1,99 @@
-@'
-# Task 2: API Key Generation and Sharing
+# Task 1: Database-Driven Student Management API
 
-## Overview
-This project implements a Flask REST API that processes text using API key authentication.
+## Project Overview
+This project is a Student Management System developed using Flask, SQLite, and Streamlit. It provides REST API endpoints to add, view, update, and delete student records. The Streamlit interface allows users to manage student data through a simple graphical interface.
 
-## Features
-- Generates unique API keys for three consumers.
-- Reads API keys securely from a local `.env` file.
-- Accepts API keys through the `X-API-Key` request header.
-- Validates API keys before processing requests.
-- Converts submitted text to uppercase.
-- Rejects missing or invalid API keys with HTTP 401.
-- Rejects invalid JSON input with HTTP 400.
-
-## Technologies
+## Technologies Used
 - Python
 - Flask
-- python-dotenv
-- PowerShell for testing
+- SQLite
+- Streamlit
+- Requests
+- Pandas
+- Visual Studio Code
 
-## Project Files
-- `app.py` - Flask API and authentication logic.
-- `generate_keys.py` - Generates unique API keys.
-- `requirements.txt` - Required Python packages.
-- `.env` - Local API keys; do not upload this file publicly.
-- `.gitignore` - Excludes secret and temporary files.
+## Features
+- View all students
+- View a specific student by ID
+- Add a new student
+- Update existing student information
+- Delete a student record
+- Display student records in a table
+- Refresh the student list through the interface
 
-##Demo vedieo
-Link: https://youtu.be/vouoV8Grqxw 
-- `README.md` - Project documentation.
+## Project Structure
+```text
+Task_1_Database_API_StreamLit/
+    streamlit_app.py
+    README.md
+    requirements.txt
 
-## Setup
-From the main assignment directory, install dependencies:
+app.py
+students.db
+```
 
-```powershell
-& ".\.venv\Scripts\python.exe" -m pip install -r ".\Task_2_API_Key_Generation\requirements.txt"
+## API Endpoints
+
+| Method | Endpoint | Description |
+|---|---|---|
+| GET | `/students` | Retrieve all students |
+| GET | `/students/<id>` | Retrieve a student by ID |
+| POST | `/students` | Add a new student |
+| PUT | `/students/<id>` | Update a student |
+| DELETE | `/students/<id>` | Delete a student |
+
+## Installation and Setup
+
+### 1. Clone the Repository
+```bash
+git clone YOUR_GITHUB_REPOSITORY_URL
+```
+
+### 2. Open the Project Folder
+Open the downloaded project folder in Visual Studio Code.
+
+### 3. Install Dependencies
+Activate your virtual environment, then run:
+
+```bash
+pip install -r requirements.txt
+```
+
+### 4. Start the Flask API
+Run the following command from the project root folder:
+
+```bash
+python app.py
+```
+
+The API will run at:
+
+`http://127.0.0.1:5000`
+
+### 5. Start the Streamlit Interface
+Open a second terminal and run:
+
+```bash
+python -m streamlit run Task_1_Database_API_StreamLit/streamlit_app.py
+```
+
+The Streamlit interface will open in your browser, usually at:
+
+`http://localhost:8501`
+
+## Testing
+The API can be tested using a browser for GET requests and tools such as Postman or PowerShell for POST, PUT, and DELETE requests. The Streamlit interface can also be used to add, view, update, and delete student records.
+
+## Demo Video
+The project demonstration video will show the working API and the Streamlit interface, including student creation, viewing, updating, and deletion.
+
+**Demo Video:** https://youtu.be/a8-3bCTTTiI?si=AtqFnt1NwKNJOpDp
+
+## Author
+Abdul Manio Hulio
+BS Computer Science
+Computer Science Student  
+SZABIST University, Larkana
+
+## Academic Project
+Developed as part of the Software Engineering assignment on developing custom APIs for microservices.
