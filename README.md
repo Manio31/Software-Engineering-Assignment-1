@@ -25,6 +25,9 @@ This project implements a Flask REST API that processes text using API key authe
 - `requirements.txt` - Required Python packages.
 - `.env` - Local API keys; do not upload this file publicly.
 - `.gitignore` - Excludes secret and temporary files.
+
+##Demo vedieo
+Link: https://youtu.be/vouoV8Grqxw 
 - `README.md` - Project documentation.
 
 ## Setup
