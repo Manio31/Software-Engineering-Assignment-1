@@ -1,5 +1,2 @@
-
 Flask
-streamlit
-requests
-pandas
+python-dotenv
